@@ -1,6 +1,7 @@
 # SoftBlush Beauty - Coming Soon Page
 
-![Beauty Product Preview](https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=630&q=80)
+<img width="1355" height="652" alt="project three" src="https://github.com/user-attachments/assets/11ad62e3-72d1-4077-9088-f3621bf640c5" />
+
 
 An elegant coming soon page for SoftBlush Beauty featuring email notification signup.
 

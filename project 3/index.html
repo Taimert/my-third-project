@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFTBLUSH BEAUTY - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #F5F0E6; /* Cream background */
+            color: #5D4037; /* Brown text */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(245, 240, 230, 0.8);
+        }
+        
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 5px;
+        }
+        
+        .coming-soon {
+            font-size: 1.8rem;
+            margin: 30px 0;
+            font-weight: 300;
+        }
+        
+        p {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .notify-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .notify-form input {
+            padding: 15px;
+            border: 1px solid #D7CCC8;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .notify-form button {
+            padding: 15px;
+            background-color: #5D4037;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .notify-form button:hover {
+            background-color: #3E2723;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+            
+            .coming-soon {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SOFTBLUSH</h1>
+        <h2>BEAUTY</h2>
+        
+        <div class="coming-soon">Launching soon!</div>
+        
+        <p>We are currently making some improvements to our website!</p>
+        
+        <form class="notify-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">NOTIFY ME</button>
+        </form>
+    </div>
+
+    <script>
+        // Form submission handling
+        const form = document.querySelector('.notify-form');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            
+            if (email && email.includes('@')) {
+                alert(`Thank you! We'll notify you at ${email} when we launch.`);
+                this.querySelector('input').value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+
+        // Simple animation for the coming soon text
+        const comingSoon = document.querySelector('.coming-soon');
+        
+        function pulseAnimation() {
+            comingSoon.style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                comingSoon.style.transform = 'scale(1)';
+            }, 1000);
+        }
+        
+        // Run the animation every 2 seconds
+        setInterval(pulseAnimation, 2000);
+        
+        // Initial animation
+        setTimeout(pulseAnimation, 500);
+    </script>
+</body>
+</html>
